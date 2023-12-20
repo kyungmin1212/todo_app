@@ -8,3 +8,13 @@ class Todo(BaseModel):
     model_config = {
         "json_schema_extra": {"examples": [{"id": 1, "item": "Example Schema!"}]}
     }
+
+
+class TodoItem(BaseModel):
+    item: str
+
+    model_config = {
+        "json_schema_extra": {
+            "examples": [{"item": "Read the next chapter of the book"}]
+        }
+    }
